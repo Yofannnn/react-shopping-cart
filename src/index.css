@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Fuzzy+Bubbles:wght@400;700&family=Great+Vibes&family=Kalam:wght@300;400;700&family=Kaushan+Script&family=Kode+Mono:wght@400..700&family=Merienda:wght@300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik+Doodle+Shadow&family=Rubik+Scribble&family=Silkscreen:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 6px;
+}
+body::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* product */
+.sticky-nav-products{
+    height: 40px;
+}
+.menu-products .category-navigation{
+    position: sticky;
+    top: 40px;
+}
+.menu-products .category-navigation .wrapped-group{
+    max-height: calc(100vh - 40px);
+    padding: .4rem;
+    overflow: auto;
+}
+.menu-products .category-navigation .group{
+    display: flex;
+    flex-direction: column;
+}
+.menu-products .category-navigation a{
+    text-decoration: none;
+    position: relative;
+    width: fit-content;
+    font-size: 1.1rem;
+    color: black;
+    margin: .2rem 0rem;
+}
+.menu-products .category-navigation a.active{
+	text-decoration: underline;
+}
+.container-products{
+    container-type: inline-size;
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(min(100%, 12rem), 1fr)); */
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 30%), 1fr));
+    gap: .5rem;
+    padding: .6rem .6rem  1.2rem .4rem;
+    overflow-x: hidden;
+}
+
+
+
+
+@media (max-width: 900px) {
+    .wrapped-products-content{
+        flex-direction: column;
+    }
+    .menu-products{
+        width: 100%;
+    }
+    .menu-products .category-navigation .group{
+        flex-direction: row;
+    }
+    .container-products{
+        width: 100%;
+    }
+}
